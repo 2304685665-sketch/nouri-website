@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Nouri Wellness Catering</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nouri</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="cart.html" class="cart-button">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </nav>
+
+    <!-- Checkout Header -->
+    <section class="checkout-header">
+        <div class="container">
+            <h1>Checkout</h1>
+            <p>Complete your order</p>
+        </div>
+    </section>
+
+    <!-- Checkout Content -->
+    <section class="checkout-content">
+        <div class="container">
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <div class="checkout-form-container">
+                    <form id="checkout-form">
+                        <!-- Delivery Information -->
+                        <div class="form-section">
+                            <h3>Delivery Information</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+44" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Delivery Address *</label>
+                                <input type="text" id="address" name="address" placeholder="Street address" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postcode">Postcode *</label>
+                                    <input type="text" id="postcode" name="postcode" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delivery Time -->
+                        <div class="form-section">
+                            <h3>Delivery Time</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="deliveryDate">Delivery Date *</label>
+                                    <input type="date" id="deliveryDate" name="deliveryDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deliveryTime">Time Slot *</label>
+                                    <select id="deliveryTime" name="deliveryTime" required>
+                                        <option value="">Select a time</option>
+                                        <option value="9-11">9:00 AM - 11:00 AM</option>
+                                        <option value="11-13">11:00 AM - 1:00 PM</option>
+                                        <option value="13-15">1:00 PM - 3:00 PM</option>
+                                        <option value="15-17">3:00 PM - 5:00 PM</option>
+                                        <option value="17-19">5:00 PM - 7:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Instructions -->
+                        <div class="form-section">
+                            <h3>Special Instructions</h3>
+                            <div class="form-group">
+                                <label for="notes">Delivery Notes (optional)</label>
+                                <textarea id="notes" name="notes" rows="3" placeholder="Any special instructions for delivery..."></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="checkout-summary">
+                    <h3>Order Summary</h3>
+                    
+                    <div class="checkout-items" id="checkout-items">
+                        <!-- Items will be loaded by JavaScrip>
+
+<div class="checkout-summary">
+  <h3>Order Summary</h3>
+
+  <div class="checkout-items" id="checkout-items">
+    <!-- JS 动态插入 -->
+  </div>
+
+  <div class="summary-line">
+    <span>Subtotal</span>
+    <span id="subtotal">£0.00</span>
+  </div>
+
+  <div class="summary-line">
+    <span>Delivery</span>
+    <span>£2.50</span>
+  </div>
+
+  <div class="summary-total">
+    <span>Total</span>
+    <span id="total">£0.00</span>
+  </div>
+
+  <button class="checkout-button">
+    Proceed to Payment
+  </button>
+</div>
