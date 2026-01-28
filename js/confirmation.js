@@ -62,4 +62,12 @@ function displayOrderDetails() {
             <span class="order-info-value">${formattedDate}</span>
         </div>
         <div class="order-info-row">
-            <span class="order-info-lab
+            <span class="order-info-label">Time Slot</span>
+            <span class="order-info-value">${formattedTime}</span>
+        </div>
+        <div class="order-info-row">
+            <span class="order-info-label">Total Paid</span>
+            <span class="order-info-value" style="color: var(--primary); font-size: 1.2rem;">£${order.total.toFixed(2)}</span>
+        </div>
+    `;
+}

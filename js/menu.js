@@ -8,7 +8,7 @@ const menuItems = [
         price: 6.50,
         category: "breakfast",
         dietary: ["vegetarian"],
-        emoji: "🥣"
+        image: "https://images.unsplash.com/photo-1517673400267-0251440c45dc?w=400&h=300&fit=crop"
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const menuItems = [
         price: 8.50,
         category: "breakfast",
         dietary: ["vegetarian"],
-        emoji: "🥑"
+        image: "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=400&h=300&fit=crop"
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ const menuItems = [
         price: 9.00,
         category: "breakfast",
         dietary: ["vegan", "gf"],
-        emoji: "🫐"
+        image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=300&fit=crop"
     },
     
     // Lunch
@@ -37,7 +37,7 @@ const menuItems = [
         price: 12.50,
         category: "lunch",
         dietary: ["vegan", "gf"],
-        emoji: "🥗"
+        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop"
     },
     {
         id: 5,
@@ -46,7 +46,7 @@ const menuItems = [
         price: 10.50,
         category: "lunch",
         dietary: [],
-        emoji: "🌯"
+        image: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&h=300&fit=crop"
     },
     {
         id: 6,
@@ -55,7 +55,7 @@ const menuItems = [
         price: 7.50,
         category: "lunch",
         dietary: ["vegetarian"],
-        emoji: "🍄"
+        image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop"
     },
     
     // Dinner
@@ -66,7 +66,7 @@ const menuItems = [
         price: 15.00,
         category: "dinner",
         dietary: ["gf"],
-        emoji: "🍣"
+        image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop"
     },
     {
         id: 8,
@@ -75,7 +75,7 @@ const menuItems = [
         price: 13.50,
         category: "dinner",
         dietary: [],
-        emoji: "🍗"
+        image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop"
     },
     {
         id: 9,
@@ -84,7 +84,7 @@ const menuItems = [
         price: 12.00,
         category: "dinner",
         dietary: ["vegan", "gf"],
-        emoji: "🍛"
+        image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&h=300&fit=crop"
     },
     
     // Snacks
@@ -95,7 +95,7 @@ const menuItems = [
         price: 4.50,
         category: "snacks",
         dietary: ["vegan", "gf"],
-        emoji: "🟤"
+        image: "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=400&h=300&fit=crop"
     },
     {
         id: 11,
@@ -104,7 +104,7 @@ const menuItems = [
         price: 5.00,
         category: "snacks",
         dietary: ["vegan", "gf"],
-        emoji: "🍓"
+        image: "https://images.unsplash.com/photo-1564093497595-593b96d80f12?w=400&h=300&fit=crop"
     },
     {
         id: 12,
@@ -113,7 +113,7 @@ const menuItems = [
         price: 6.00,
         category: "snacks",
         dietary: ["vegan", "gf"],
-        emoji: "🥕"
+        image: "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=400&h=300&fit=crop"
     }
 ];
 
@@ -151,7 +151,9 @@ function renderMenuItems(items) {
         });
         
         card.innerHTML = `
-            <div class="food-image">${item.emoji}</div>
+            <div class="food-image">
+                <img src="${item.image}" alt="${item.name}">
+            </div>
             <div class="food-info">
                 <h3>${item.name}</h3>
                 <p>${item.description}</p>
