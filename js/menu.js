@@ -104,7 +104,7 @@ const menuItems = [
         price: 5.00,
         category: "snacks",
         dietary: ["vegan", "gf"],
-        image: "https://images.unsplash.com/photo-1564093497595-593b96d80f12?w=400&h=300&fit=crop"
+        image: "https://images.unsplash.com/photo-1568158879083-c42860933ed7?w=400&h=300&fit=crop"
     },
     {
         id: 12,
