@@ -6,6 +6,7 @@
     <title>Checkout | Nouri Wellness Catering</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -110,6 +111,16 @@
                                 <textarea id="notes" name="notes" rows="3" placeholder="Any special instructions for delivery..."></textarea>
                             </div>
                         </div>
+
+                        <!-- Payment Information -->
+                        <div class="form-section">
+                            <h3>Payment Information</h3>
+                            <div class="form-group">
+                                <label for="card-element">Credit or Debit Card *</label>
+                                <div id="card-element" class="stripe-card-input"></div>
+                                <div id="card-errors" class="card-errors"></div>
+                            </div>
+                        </div>
                     </form>
                 </div>
 
@@ -118,31 +129,45 @@
                     <h3>Order Summary</h3>
                     
                     <div class="checkout-items" id="checkout-items">
-                        <!-- Items will be loaded by JavaScrip>
+                        <!-- Items will be loaded by JavaScript -->
+                    </div>
+                    
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">£0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery</span>
+                        <span id="checkout-delivery">£3.50</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="checkout-total">£0.00</span>
+                    </div>
+                    
+                    <button type="button" class="btn btn-secondary pay-btn" id="pay-btn">
+                        💳 Pay Now
+                    </button>
+                    
+                    <p class="secure-note">🔒 Secure payment powered by Stripe</p>
+                    
+                    <a href="cart.html" class="back-to-cart">← Back to Cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="checkout-summary">
-  <h3>Order Summary</h3>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Nouri by Freska | Wellness Catering</p>
+            <p>© 2026 Freska. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <div class="checkout-items" id="checkout-items">
-    <!-- JS 动态插入 -->
-  </div>
-
-  <div class="summary-line">
-    <span>Subtotal</span>
-    <span id="subtotal">£0.00</span>
-  </div>
-
-  <div class="summary-line">
-    <span>Delivery</span>
-    <span>£2.50</span>
-  </div>
-
-  <div class="summary-total">
-    <span>Total</span>
-    <span id="total">£0.00</span>
-  </div>
-
-  <button class="checkout-button">
-    Proceed to Payment
-  </button>
-</div>
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

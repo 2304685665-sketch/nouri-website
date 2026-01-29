@@ -1230,3 +1230,23 @@ h1, h2, h3 {
         width: 100%;
     }
 }
+
+/* ========== Stripe Card Input ========== */
+.stripe-card-input {
+    padding: 15px;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    background-color: var(--white);
+    transition: border-color 0.3s ease;
+}
+
+.stripe-card-input:focus-within {
+    border-color: var(--primary);
+}
+
+.card-errors {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    min-height: 20px;
+}
